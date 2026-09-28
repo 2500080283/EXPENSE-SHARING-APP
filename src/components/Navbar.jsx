@@ -207,7 +207,7 @@ export default function Navbar({
           {/* Notifications Bell */}
           <button
             type="button"
-            className="btn-icon"
+            className={`btn-icon ${unreadRemindersCount > 0 ? "bell-has-unread" : ""}`}
             style={{ position: "relative" }}
             onClick={onOpenNotifications}
             title="Notifications & Reminders"
@@ -215,6 +215,7 @@ export default function Navbar({
             <Bell size={18} />
             {unreadRemindersCount > 0 && (
               <span
+                className="badge-unread-pulse"
                 style={{
                   position: "absolute",
                   top: "-3px",

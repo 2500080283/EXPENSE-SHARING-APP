@@ -528,6 +528,7 @@ export default function GroupDetail({
                   return (
                     <div
                       key={idx}
+                      className="card-interactive"
                       style={{
                         display: "flex",
                         alignItems: "center",

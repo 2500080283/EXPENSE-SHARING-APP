@@ -49,11 +49,11 @@ export default function UserDashboard({
   return (
     <div>
       {/* Hero Net Balance Banner */}
-      <div className="hero-banner">
+      <div className="hero-banner animate-fade-in-up">
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "1.5rem" }}>
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}>
-              <span className="badge badge-purple">
+              <span className="badge badge-purple animate-pulse-glow">
                 <Wallet size={12} /> Personal Balance Hub
               </span>
               <span style={{ fontSize: "0.85rem", color: "var(--text-secondary)" }}>
@@ -104,7 +104,7 @@ export default function UserDashboard({
 
       {/* 4 Stat Cards */}
       <div className="stat-grid">
-        <div className="stat-card">
+        <div className="stat-card animate-fade-in-up stagger-1">
           <div className="stat-label">
             <Scale size={14} color="var(--primary)" /> Net Balance
           </div>
@@ -116,7 +116,7 @@ export default function UserDashboard({
           </span>
         </div>
 
-        <div className="stat-card">
+        <div className="stat-card animate-fade-in-up stagger-2">
           <div className="stat-label">
             <TrendingUp size={14} color="var(--primary)" /> You Are Owed
           </div>
@@ -128,7 +128,7 @@ export default function UserDashboard({
           </span>
         </div>
 
-        <div className="stat-card">
+        <div className="stat-card animate-fade-in-up stagger-3">
           <div className="stat-label">
             <TrendingDown size={14} color="var(--danger)" /> You Owe
           </div>
@@ -140,7 +140,7 @@ export default function UserDashboard({
           </span>
         </div>
 
-        <div className="stat-card">
+        <div className="stat-card animate-fade-in-up stagger-4">
           <div className="stat-label">
             <Receipt size={14} color="var(--info)" /> Total Expenses Logged
           </div>
