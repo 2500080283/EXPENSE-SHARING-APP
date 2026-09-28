@@ -158,7 +158,7 @@ export default function GroupDetail({
                 color: myNet > 0.01 ? "var(--primary)" : myNet < -0.01 ? "var(--danger)" : "var(--text-muted)"
               }}
             >
-              {myNet > 0.01 ? `+${formatCurrency(myNet, group.currency)}` : myNet < -0.01 ? formatCurrency(myNet, group.currency) : "Settled ($0.00)"}
+              {myNet > 0.01 ? `+${formatCurrency(myNet, group.currency)}` : myNet < -0.01 ? formatCurrency(myNet, group.currency) : "Settled (₹0.00)"}
             </div>
           </div>
 

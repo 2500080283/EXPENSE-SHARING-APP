@@ -55,7 +55,7 @@ export default function SettleUpModal({
       fromUserId,
       toUserId,
       amount: numAmount,
-      currency: "USD",
+      currency: (groups.find(g => g.id === groupId)?.currency) || "INR",
       date: new Date().toISOString().slice(0, 10),
       paymentMethod,
       notes: notes.trim() || `Payment via ${paymentMethod}`,

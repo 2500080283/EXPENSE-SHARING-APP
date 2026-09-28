@@ -96,7 +96,7 @@ graph TD
 | **User Account Management** | View user activity, toggle account status (*Active* / *Suspended*), adjust system privileges (*User* / *Admin*), and register new members. |
 | **Group Governance** | Audit group spending, view member compositions, inspect currency baselines, and archive or delete stale spaces. |
 | **Dispute Mediation Desk** | Centralized console to review flagged member disputes, assess member claims, and submit official resolution notes to close dispute cases. |
-| **High-Value Expense Ledger** | Automated security and compliance monitoring highlighting all expenditures exceeding $400 for rapid anomaly detection. |
+| **High-Value Expense Ledger** | Automated security and compliance monitoring highlighting all expenditures exceeding ₹4,000 for rapid anomaly detection. |
 | **Category Customizer** | Create and manage custom expense categories with custom color palettes and icon bindings. |
 | **Data Backup & Disaster Recovery** | Storage quota monitor, instant full-platform JSON database export, JSON schema restore, and factory demo data reset. |
 
@@ -104,7 +104,7 @@ graph TD
 
 ## 🧮 Debt Simplification Algorithm
 
-Standard expense sharing creates an exponential web of criss-crossing debts. If Person A owes Person B \$20, and Person B owes Person C \$20, Person A can simply pay Person C \$20 directly, reducing 2 transactions to 1.
+Standard expense sharing creates an exponential web of criss-crossing debts. If Person A owes Person B ₹200, and Person B owes Person C ₹200, Person A can simply pay Person C ₹200 directly, reducing 2 transactions to 1.
 
 ShareWise implements a **Greedy Minimum Cash Flow** algorithm operating in $\mathcal{O}(N \log N)$ time:
 
@@ -124,14 +124,14 @@ ShareWise implements a **Greedy Minimum Cash Flow** algorithm operating in $\mat
 
 ```
 Before Simplification (4 Criss-crossing Transactions):
-  Alice  ── owes $40 ──>  Bob
-  Bob    ── owes $30 ──>  Charlie
-  Charlie── owes $20 ──>  David
-  David  ── owes $10 ──>  Alice
+  Alice   ── owes ₹400  ──>  Bob
+  Bob     ── owes ₹300  ──>  Charlie
+  Charlie ── owes ₹200  ──>  David
+  David   ── owes ₹100  ──>  Alice
 
 After ShareWise Simplification (2 Direct Transactions):
-  Alice  ── pays $30 ──>  Bob
-  David  ── pays $10 ──>  Charlie
+  Alice   ── pays ₹300  ──>  Bob
+  David   ── pays ₹100  ──>  Charlie
 ```
 
 ---

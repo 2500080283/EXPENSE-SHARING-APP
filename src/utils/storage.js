@@ -9,7 +9,7 @@ import {
   INITIAL_PLATFORM_SETTINGS
 } from "../data/initialData";
 
-const STORAGE_KEY = "sharewise_app_state_v1";
+const STORAGE_KEY = "sharewise_app_state_v2_inr";
 
 export function getInitialState() {
   return {
@@ -29,6 +29,11 @@ export function getInitialState() {
 
 export function loadAppState() {
   try {
+    // Clean up legacy v1 storage if present
+    if (localStorage.getItem("sharewise_app_state_v1")) {
+      localStorage.removeItem("sharewise_app_state_v1");
+    }
+
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) {
       const initial = getInitialState();

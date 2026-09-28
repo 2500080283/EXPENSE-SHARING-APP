@@ -13,7 +13,7 @@ export default function CreateGroupModal({
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [type, setType] = useState("apartment");
-  const [currency, setCurrency] = useState("USD");
+  const [currency, setCurrency] = useState("INR");
   const [selectedMembers, setSelectedMembers] = useState([activeUserId]);
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -137,9 +137,9 @@ export default function CreateGroupModal({
               value={currency}
               onChange={(e) => setCurrency(e.target.value)}
             >
+              <option value="INR">INR (₹)</option>
               <option value="USD">USD ($)</option>
               <option value="EUR">EUR (€)</option>
-              <option value="INR">INR (₹)</option>
               <option value="GBP">GBP (£)</option>
               <option value="CAD">CAD (CA$)</option>
               <option value="AUD">AUD (A$)</option>

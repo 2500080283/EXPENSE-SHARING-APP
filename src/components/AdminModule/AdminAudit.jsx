@@ -25,7 +25,7 @@ export default function AdminAudit({
     onResolveDispute(disputeId, notes);
   };
 
-  const highValueExpenses = expenses.filter(e => Number(e.amount) >= 400);
+  const highValueExpenses = expenses.filter(e => Number(e.amount) >= 4000);
 
   return (
     <div>
@@ -206,7 +206,7 @@ export default function AdminAudit({
                     </td>
                     <td>
                       <span className="badge badge-warning" style={{ display: "inline-flex", gap: "4px" }}>
-                        <ShieldAlert size={12} /> High-Value Flag (&gt;$400)
+                        <ShieldAlert size={12} /> High-Value Flag (&gt;₹4,000)
                       </span>
                     </td>
                   </tr>

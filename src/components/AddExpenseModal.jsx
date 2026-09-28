@@ -17,7 +17,7 @@ export default function AddExpenseModal({
 }) {
   const [description, setDescription] = useState("");
   const [amount, setAmount] = useState("");
-  const [currency, setCurrency] = useState("USD");
+  const [currency, setCurrency] = useState("INR");
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
   const [category, setCategory] = useState("dining");
   const [groupId, setGroupId] = useState(preselectedGroupId || (groups[0]?.id || ""));
@@ -34,7 +34,7 @@ export default function AddExpenseModal({
       const grp = groups.find(g => g.id === groupId);
       if (grp) {
         setSelectedMemberIds(grp.members);
-        setCurrency(grp.currency || "USD");
+        setCurrency(grp.currency || "INR");
       }
     } else {
       // Direct split or all users
@@ -242,9 +242,9 @@ export default function AddExpenseModal({
               value={currency}
               onChange={(e) => setCurrency(e.target.value)}
             >
+              <option value="INR">INR (₹)</option>
               <option value="USD">USD ($)</option>
               <option value="EUR">EUR (€)</option>
-              <option value="INR">INR (₹)</option>
               <option value="GBP">GBP (£)</option>
               <option value="CAD">CAD (CA$)</option>
               <option value="AUD">AUD (A$)</option>

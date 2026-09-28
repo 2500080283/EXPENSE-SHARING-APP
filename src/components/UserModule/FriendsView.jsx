@@ -44,8 +44,8 @@ export default function FriendsView({
       email: newFriendEmail.trim(),
       role: "user",
       avatar: "",
-      phone: newFriendPhone.trim() || "+1 (555) 000-1234",
-      paymentHandle: newFriendHandle.trim() || `${newFriendName.toLowerCase().replace(/\s+/g, '')}@venmo`,
+      phone: newFriendPhone.trim() || "+91 98765 00000",
+      paymentHandle: newFriendHandle.trim() || `${newFriendName.toLowerCase().replace(/\s+/g, '')}@upi`,
       status: "active",
       joinedDate: new Date().toISOString().slice(0, 10)
     };
@@ -172,7 +172,7 @@ export default function FriendsView({
                       color: isOwed ? "var(--primary)" : youOwe ? "var(--danger)" : "var(--text-muted)"
                     }}
                   >
-                    {isOwed ? `+${formatCurrency(balance)}` : youOwe ? formatCurrency(balance) : "$0.00"}
+                    {isOwed ? `+${formatCurrency(balance)}` : youOwe ? formatCurrency(balance) : "₹0.00"}
                   </span>
                 </div>
               </div>

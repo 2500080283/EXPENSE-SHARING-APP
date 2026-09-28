@@ -183,12 +183,12 @@ export default function AdminCategories({
               <label className="form-label">Base Default Currency</label>
               <select
                 className="form-select"
-                value={formSettings.defaultCurrency || "USD"}
+                value={formSettings.defaultCurrency || "INR"}
                 onChange={(e) => setFormSettings({ ...formSettings, defaultCurrency: e.target.value })}
               >
+                <option value="INR">INR (₹)</option>
                 <option value="USD">USD ($)</option>
                 <option value="EUR">EUR (€)</option>
-                <option value="INR">INR (₹)</option>
                 <option value="GBP">GBP (£)</option>
                 <option value="CAD">CAD (CA$)</option>
                 <option value="AUD">AUD (A$)</option>

@@ -171,7 +171,7 @@ export default function GroupsView({
                         color: isOwed ? "var(--primary)" : owes ? "var(--danger)" : "var(--text-muted)"
                       }}
                     >
-                      {isOwed ? `+${formatCurrency(groupOverview.netBalance, group.currency)}` : owes ? formatCurrency(groupOverview.netBalance, group.currency) : "Settled ($0.00)"}
+                      {isOwed ? `+${formatCurrency(groupOverview.netBalance, group.currency)}` : owes ? formatCurrency(groupOverview.netBalance, group.currency) : "Settled (₹0.00)"}
                     </span>
                   </div>
                 </div>

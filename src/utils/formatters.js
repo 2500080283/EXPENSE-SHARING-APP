@@ -2,21 +2,22 @@
  * Formatting helpers for currencies, dates, and CSV export
  */
 
-export function formatCurrency(amount, currency = "USD") {
+export function formatCurrency(amount, currency = "INR") {
   const num = Number(amount) || 0;
   const absNum = Math.abs(num);
 
   const symbols = {
+    INR: "₹",
     USD: "$",
     EUR: "€",
-    INR: "₹",
     GBP: "£",
     CAD: "CA$",
     AUD: "A$"
   };
 
-  const symbol = symbols[currency] || "$";
-  const formatted = absNum.toLocaleString("en-US", {
+  const symbol = symbols[currency] || "₹";
+  const locale = currency === "INR" ? "en-IN" : "en-US";
+  const formatted = absNum.toLocaleString(locale, {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2
   });
@@ -80,7 +81,7 @@ export function exportExpensesToCSV(expenses, usersMap, groupsMap, categoriesMap
     const categoryName = categoriesMap[exp.category]?.name || exp.category;
     
     const splitsSummary = Array.isArray(exp.splits)
-      ? exp.splits.map(s => `${usersMap[s.userId]?.name || s.userId}: $${s.amount}`).join("; ")
+      ? exp.splits.map(s => `${usersMap[s.userId]?.name || s.userId}: ₹${s.amount}`).join("; ")
       : "";
 
     return [
@@ -90,7 +91,7 @@ export function exportExpensesToCSV(expenses, usersMap, groupsMap, categoriesMap
       `"${categoryName}"`,
       `"${groupName}"`,
       exp.amount,
-      exp.currency || "USD",
+      exp.currency || "INR",
       `"${payerName}"`,
       `"${splitsSummary}"`,
       `"${(exp.notes || "").replace(/"/g, '""')}"`,

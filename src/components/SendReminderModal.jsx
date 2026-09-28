@@ -34,7 +34,7 @@ export default function SendReminderModal({
   }, [prefillDebtor, prefillAmount, activeUser, users]);
 
   const recipient = users.find(u => u.id === recipientId);
-  const formattedAmt = amount ? formatCurrency(parseFloat(amount) || 0) : "$0.00";
+  const formattedAmt = amount ? formatCurrency(parseFloat(amount) || 0) : "₹0.00";
 
   // Pre-generate template texts
   const getTemplateText = (tplKey) => {
