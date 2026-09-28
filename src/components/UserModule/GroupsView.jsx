@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import UserAvatar from "../UserAvatar";
 import CategoryIcon from "../CategoryIcon";
 import { formatCurrency } from "../../utils/formatters";
-import { getUserFinancialOverview } from "../../utils/calculations";
-import { Plus, Users, Search, ArrowRight, Home, Plane, Utensils, Briefcase, Heart } from "lucide-react";
+import { Plus, Users, Search } from "lucide-react";
 
 export default function GroupsView({
   groups,

@@ -3,16 +3,11 @@ import UserAvatar from "../UserAvatar";
 import { formatCurrency } from "../../utils/formatters";
 import { getUserPairwiseBalances } from "../../utils/calculations";
 import {
-  Users,
   UserPlus,
   Scale,
   Bell,
   Plus,
-  Mail,
-  Phone,
-  Search,
-  CheckCircle,
-  ArrowRight
+  Search
 } from "lucide-react";
 
 export default function FriendsView({

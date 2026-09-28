@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import UserAvatar from "../UserAvatar";
-import CategoryIcon from "../CategoryIcon";
 import { formatCurrency, formatDate } from "../../utils/formatters";
 import {
   ShieldAlert,
   AlertTriangle,
   CheckCircle,
   FileText,
-  Search,
-  Check,
-  XCircle,
-  AlertCircle
+  Check
 } from "lucide-react";
 
 export default function AdminAudit({
@@ -19,12 +15,10 @@ export default function AdminAudit({
   users,
   groups,
   categories,
-  onResolveDispute,
-  onFlagExpense
+  onResolveDispute
 }) {
   const [subSection, setSubSection] = useState("disputes"); // "disputes" or "ledger"
   const [resolutionText, setResolutionText] = useState({});
-  const [searchTerm, setSearchTerm] = useState("");
 
   const handleResolve = (disputeId) => {
     const notes = resolutionText[disputeId] || "Resolved following administrator mediation.";

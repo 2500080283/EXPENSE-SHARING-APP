@@ -1,7 +1,7 @@
 import React from "react";
 import UserAvatar from "./UserAvatar";
 import { formatCurrency, formatRelativeTime } from "../utils/formatters";
-import { Bell, Check, Clock, X, ArrowUpRight, ArrowDownLeft } from "lucide-react";
+import { Bell, X } from "lucide-react";
 
 export default function NotificationDrawer({
   isOpen,

@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Modal from "./Modal";
-import UserAvatar from "./UserAvatar";
 import { formatCurrency } from "../utils/formatters";
-import { Bell, Send, Copy, MessageSquare, Check, Share2 } from "lucide-react";
+import { Bell, Copy, Check, Share2 } from "lucide-react";
 
 export default function SendReminderModal({
   isOpen,
   onClose,
   onSendReminder,
   users,
-  groups,
   activeUser,
   prefillDebtor = null,
   prefillAmount = null

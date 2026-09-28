@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
 import UserAvatar from "./UserAvatar";
-import { Plus, Users, Home, Plane, Utensils, Briefcase, Heart, Check } from "lucide-react";
+import { Plus } from "lucide-react";
 
 export default function CreateGroupModal({
   isOpen,

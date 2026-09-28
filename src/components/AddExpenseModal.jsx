@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Modal from "./Modal";
 import UserAvatar from "./UserAvatar";
-import CategoryIcon from "./CategoryIcon";
 import { computeSplits } from "../utils/calculations";
 import { formatCurrency } from "../utils/formatters";
-import { Plus, Users, User, DollarSign, Calendar, Tag, FileText, Check } from "lucide-react";
+import { Check } from "lucide-react";
 
 export default function AddExpenseModal({
   isOpen,

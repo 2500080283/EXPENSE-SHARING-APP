@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import confetti from "canvas-confetti";
 import Modal from "./Modal";
 import UserAvatar from "./UserAvatar";
-import { formatCurrency } from "../utils/formatters";
-import { Check, ArrowRight, DollarSign, Wallet } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 
 export default function SettleUpModal({
   isOpen,

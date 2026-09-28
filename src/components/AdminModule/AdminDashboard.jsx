@@ -13,8 +13,6 @@ import {
   AlertTriangle,
   Settings,
   HardDrive,
-  TrendingUp,
-  Scale,
   DollarSign
 } from "lucide-react";
 
@@ -32,10 +30,9 @@ export default function AdminDashboard({
 }) {
   const [adminTab, setAdminTab] = useState("users"); // "users", "groups", "audit", "categories", "backup"
 
-  const { users, groups, expenses, settlements, disputes, categories, settings } = appState;
+  const { users, groups, expenses, disputes, categories, settings } = appState;
 
   const totalVolume = expenses.filter(e => e.status !== "cancelled").reduce((s, e) => s + Number(e.amount), 0);
-  const totalSettled = settlements.filter(s => s.status === "completed").reduce((s, e) => s + Number(e.amount), 0);
   const openDisputes = disputes.filter(d => d.status !== "resolved").length;
 
   return (

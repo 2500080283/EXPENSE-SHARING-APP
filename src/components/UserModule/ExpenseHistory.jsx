@@ -4,15 +4,11 @@ import CategoryIcon from "../CategoryIcon";
 import { formatCurrency, formatDate, exportExpensesToCSV } from "../../utils/formatters";
 import {
   Receipt,
-  Search,
   Download,
-  Filter,
   AlertTriangle,
   ChevronDown,
   ChevronUp,
-  Trash2,
-  Calendar,
-  Layers
+  Trash2
 } from "lucide-react";
 
 export default function ExpenseHistory({

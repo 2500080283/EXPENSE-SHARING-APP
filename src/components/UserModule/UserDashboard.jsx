@@ -13,9 +13,7 @@ import {
   Bell,
   CheckCircle,
   Receipt,
-  Wallet,
-  ArrowUpRight,
-  ArrowDownLeft
+  Wallet
 } from "lucide-react";
 
 export default function UserDashboard({

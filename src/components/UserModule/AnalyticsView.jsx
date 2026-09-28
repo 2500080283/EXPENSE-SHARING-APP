@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import CategoryIcon from "../CategoryIcon";
 import UserAvatar from "../UserAvatar";
 import { formatCurrency } from "../../utils/formatters";
 import { getCategorySpendingBreakdown } from "../../utils/calculations";
-import { BarChart3, PieChart, TrendingUp, DollarSign, Award, Lightbulb, Users } from "lucide-react";
+import { PieChart, TrendingUp, DollarSign, Award, Lightbulb, Users } from "lucide-react";
 
 export default function AnalyticsView({
   expenses,
@@ -30,13 +29,12 @@ export default function AnalyticsView({
     return { ...u, totalPaid };
   }).sort((a, b) => b.totalPaid - a.totalPaid);
 
-  // Build SVG Donut Chart angles
-  let accumulatedAngle = 0;
-  const donutSlices = categoryBreakdown.map(cat => {
+  // Build SVG Donut Chart angles functionally
+  const donutSlices = categoryBreakdown.reduce((acc, cat) => {
+    const prevEnd = acc.length > 0 ? acc[acc.length - 1].endAngle : 0;
     const sliceAngle = (cat.percentage / 100) * 360;
-    const startAngle = accumulatedAngle;
-    const endAngle = accumulatedAngle + sliceAngle;
-    accumulatedAngle += sliceAngle;
+    const startAngle = prevEnd;
+    const endAngle = prevEnd + sliceAngle;
 
     // Convert polar coordinates to Cartesian for SVG path
     const getCoordinatesForPercent = (percent) => {
@@ -59,13 +57,14 @@ export default function AnalyticsView({
       "Z"
     ].join(" ");
 
-    return {
+    acc.push({
       ...cat,
       pathData,
       startAngle,
       endAngle
-    };
-  });
+    });
+    return acc;
+  }, []);
 
   return (
     <div>

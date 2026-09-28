@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CategoryIcon from "../CategoryIcon";
-import { Plus, Tag, Settings, Globe, Check, Sliders, Shield } from "lucide-react";
+import { Plus, Tag, Settings, Check, Sliders } from "lucide-react";
 
 export default function AdminCategories({
   categories,

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import UserAvatar from "../UserAvatar";
 import CategoryIcon from "../CategoryIcon";
-import { formatCurrency, formatDate } from "../../utils/formatters";
-import { Users, Search, Archive, RotateCcw, Trash2, Eye, Shield } from "lucide-react";
+import { formatCurrency } from "../../utils/formatters";
+import { Search, Archive, RotateCcw, Trash2 } from "lucide-react";
 
 export default function AdminGroups({
   groups,

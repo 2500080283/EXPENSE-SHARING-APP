@@ -10,8 +10,7 @@ import {
   HeartPulse,
   Tag,
   Palmtree,
-  Coffee,
-  HelpCircle
+  Coffee
 } from "lucide-react";
 
 const ICON_MAP = {

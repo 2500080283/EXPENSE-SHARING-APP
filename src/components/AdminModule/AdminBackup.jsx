@@ -8,9 +8,7 @@ import {
   Download,
   Upload,
   RotateCcw,
-  CheckCircle2,
   HardDrive,
-  FileJson,
   ShieldCheck,
   AlertTriangle
 } from "lucide-react";
@@ -41,7 +39,7 @@ export default function AdminBackup({
         setRestoreSuccess(true);
         setRestoreError("");
         setTimeout(() => setRestoreSuccess(false), 3000);
-      } catch (err) {
+      } catch {
         setRestoreError("Failed to parse JSON backup file. Please ensure it is a valid export.");
       }
     };

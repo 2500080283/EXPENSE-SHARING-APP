@@ -111,7 +111,6 @@ export function calculatePairwiseDebts(members, expenses, settlements = []) {
 
   // Consolidate bidirectional debts (if A owes B $50 and B owes A $20 -> A owes B $30)
   const results = [];
-  const visited = new Set();
 
   for (let i = 0; i < members.length; i++) {
     for (let j = i + 1; j < members.length; j++) {

@@ -4,20 +4,16 @@ import CategoryIcon from "../CategoryIcon";
 import { formatCurrency, formatDate, exportExpensesToCSV } from "../../utils/formatters";
 import { calculateNetBalances, calculatePairwiseDebts, simplifyDebts } from "../../utils/debtSimplifier";
 import {
-  Users,
   Plus,
   Scale,
   ArrowRight,
   Receipt,
   Download,
-  Calendar,
   AlertTriangle,
   CheckCircle,
-  HelpCircle,
   ChevronLeft,
   ChevronDown,
   ChevronUp,
-  Tag,
   Trash2
 } from "lucide-react";
 

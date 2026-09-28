@@ -2,17 +2,11 @@ import React, { useState } from "react";
 import UserAvatar from "../UserAvatar";
 import { formatCurrency, formatDate } from "../../utils/formatters";
 import {
-  Users,
   Search,
   UserCheck,
   UserX,
   Shield,
-  ShieldAlert,
-  UserPlus,
-  Mail,
-  Phone,
-  CheckCircle,
-  MoreVertical
+  UserPlus
 } from "lucide-react";
 
 export default function AdminUsers({
